@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>最簡積木編輯器原型</title>
+  <style>
+    /* 版面配置：左邊積木庫，右邊工作區 */
+    #container {
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+      font-family: sans-serif;
+    }
+
+    /* 左邊的積木庫 */
+    #blocks {
+      width: 200px;
+      background: #f2f2f2;
+      padding: 10px;
+      border-right: 1px solid #ccc;
+    }
+
+    /* 每個積木的外觀 */
+    .block {
+      background: #4caf50;
+      color: white;
+      padding: 10px;
+      margin-bottom: 10px;
+      cursor: grab;
+      user-select: none;
+    }
+
+    /* 右邊的工作區 */
+    #workspace {
+      flex-grow: 1;
+      padding: 10px;
+      background: #ffffff;
+      position: relative;
+    }
+
+    /* 被拖進工作區的積木 */
+    .placed {
+      position: absolute; /* 用絕對定位讓積木可以放在工作區任意位置 */
+      cursor: move;
+    }
+
+    /* 執行按鈕 */
+    #runBtn {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      padding: 10px 20px;
+      background: #1976d2;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="container">
+
+  <!-- 左邊：積木庫 -->
+  <div id="blocks">
+    <div class="block" draggable="true" data-code="console.log('Hello');">
+      print("Hello")
+    </div>
+
+    <div class="block" draggable="true" data-code="console.log('World');">
+      print("World")
+    </div>
+
+    <div class="block" draggable="true" data-code="alert('Hi');">
+      alert("Hi")
+    </div>
+  </div>
+
+  <!-- 右邊：工作區 -->
+  <div id="workspace"></div>
+</div>
+
+<div id="runBtn">執行</div>
+
+<script>
+/*
+最小 drag-and-drop 系統
+=======================
+我們要做兩件非常基本的事：
+
+1. 移動「積木庫」裡的積木到「工作區」
+2. 在工作區內讓積木可以被拖曳 reposition
+*/
+
+/* 目前正在被拖曳的積木 */
+let currentDragged = null;
+
+/* 當從積木庫開始拖曳 */
+document.querySelectorAll('.block').forEach(b => {
+  b.addEventListener('dragstart', e => {
+    currentDragged = e.target;
+  });
+});
+
+/* 阻止預設行為，讓工作區可以接收 drop */
+const workspace = document.getElementById('workspace');
+workspace.addEventListener('dragover', e => e.preventDefault());
+
+/* 當積木被放進工作區 */
+workspace.addEventListener('drop', e => {
+  e.preventDefault();
+
+  const newBlock = currentDragged.cloneNode(true);
+  newBlock.classList.add('placed');
+
+  // 重要修正：工作區不需要 HTML drag-and-drop
+  // 否則拖曳會被視為「複製新積木」
+  newBlock.removeAttribute('draggable');
+
+  const rect = workspace.getBoundingClientRect();
+  newBlock.style.left = (e.clientX - rect.left) + 'px';
+  newBlock.style.top = (e.clientY - rect.top) + 'px';
+
+  workspace.appendChild(newBlock);
+
+  enableMove(newBlock);
+});
+
+/*
+讓被放進工作區的積木可以自由移動（拖曳）
+=================================================
+*/
+
+function enableMove(block) {
+  let offsetX = 0;
+  let offsetY = 0;
+
+  block.addEventListener('mousedown', e => {
+    offsetX = e.offsetX;
+    offsetY = e.offsetY;
+
+    function move(ev) {
+      block.style.left = (ev.clientX - workspace.getBoundingClientRect().left - offsetX) + 'px';
+      block.style.top = (ev.clientY - workspace.getBoundingClientRect().top - offsetY) + 'px';
+    }
+
+    function stop() {
+      document.removeEventListener('mousemove', move);
+      document.removeEventListener('mouseup', stop);
+    }
+
+    document.addEventListener('mousemove', move);
+    document.addEventListener('mouseup', stop);
+  });
+}
+
+/*
+執行積木
+========
+執行邏輯非常簡單：
+
+1. 找出工作區所有積木
+2. 逐個讀取積木的 data-code (每個積木自己的 JS)
+3. 串成一段 JavaScript
+4. 用 Function(...) 執行
+*/
+document.getElementById('runBtn').addEventListener('click', () => {
+  const placedBlocks = document.querySelectorAll('.placed');
+
+  let code = '';
+  placedBlocks.forEach(b => {
+    code += b.dataset.code + '\n';
+  });
+
+  const fn = new Function(code);
+  fn();
+});
+</script>
+
+</body>
+</html>
