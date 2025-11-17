@@ -1,0 +1,200 @@
+:root {
+    --odd-level: #e1e1e1;
+    --even-level: #303030;
+    --odd-level-hover: #d2d2d2;
+    --even-level-hover: #414141;
+    --place-hoder: #acacac;
+}
+
+* {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+}
+
+ul {
+    color: var(--odd-level);
+}
+
+input[type="radio"], input[type="checkbox"] {
+    display: none;
+}
+
+input[type="radio"]:focus, input[type="checkbox"]:focus {
+    display: none;
+}
+
+input[type="text"], input[type="number"].warp {
+    font-size: 14px;
+    box-sizing: border-box;
+    height: 30px;
+    margin-top: 10px;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    color: var(--odd-level);
+    background-color: var(--even-level);
+}
+
+input[type="number"] {
+    font-size: 14px;
+    box-sizing: border-box;
+    height: 30px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    color: var(--odd-level);
+    background-color: var(--even-level);
+}
+
+input[type="text"]::placeholder, input[type="number"]::placeholder {
+    color: var(--place-hoder);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    box-sizing: border-box;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 30px;
+    background-color: var(--odd-level);
+}
+
+form {
+    box-sizing: border-box;
+    padding: 40px;
+    margin: 0 auto;
+    width: 40vw;
+    border-radius: 10px;
+    background-color: var(--even-level);
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+}
+
+form h1 {
+    margin: 0;
+    color: var(--odd-level);
+    font-size: 25px;
+}
+
+.question {
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--odd-level);
+    color: var(--even-level);
+    transition: all 0.5s;
+    font-size: medium;
+}
+
+.question:hover {
+    background-color: var(--odd-level-hover);
+}
+
+.radio-set {
+    height: 40px;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.radio-set * {
+    flex: 1;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+.radio-set .radio {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 30px;
+    padding: 4px;
+    background-color: var(--even-level);
+    color: var(--odd-level);
+    border-radius: 10px;
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.radio-set input[type="radio"]:checked + .radio {
+    border: var(--even-level) 2px solid;
+    background-color: var(--odd-level);
+    color: var(--even-level);
+}
+
+.button-set {
+    display: flex;
+    gap: 20px;
+}
+
+.button-set * {
+    flex: 1;
+    border-radius: 10px;
+    border: 0;
+    margin: 20px auto 0 auto;
+    height: 30px;
+    transition: all 0.5s;
+}
+
+.button-set *:hover {
+    background-color: var(--odd-level-hover);
+}
+
+.checkbox-set {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkbox-set * {
+    width: 100%;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+.checkbox-set .checkbox {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 30px;
+    padding: 4px;
+    background-color: var(--even-level);
+    color: var(--odd-level);
+    border-radius: 10px;
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.checkbox-set input[type="checkbox"]:checked + .checkbox {
+    border: var(--even-level) 2px solid;
+    background-color: var(--odd-level);
+    color: var(--even-level);
+}
+
+.number-set {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.number-set input[type="number"] {
+    flex: 1;
+}
+
+.invisible {
+    display: none;
+}

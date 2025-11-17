@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>高中生時間使用調查</title>
+</head>
+<body>
+    <main>
+        <form id="surveyForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdrwvNZCGTF4nZQshi9F5e1Yy9B-BQsnmtkw_fegtdu4Ochbg/formResponse" method="post" target="iframe_redirect">
+            <h1>高中生生活調查</h1>
+            <div id="page-1" class="page">
+                <ul>
+                    <li>本問卷會詢問你的生活目前的生活習慣及看法以及時間分配。</li>
+                    <li>每題均<b>不強制作答</b>，不想回答可直接略過。</li>
+                </ul>
+                <span class="button-set">
+                    <button type="button" class="next" data-current-page="1">開始問卷調查</button>
+                </span>
+            </div>
+            <div id="page-2" class="page invisible">
+                <span class="question">
+                    以下部分為基本調查，不強制作答(1/5)。
+                </span>
+                <span class="question">
+                    <span>你的<b>電子信箱</b>？(請仔細檢查確認是你自己的電子信箱)</span><br>
+                    <input type="text" name="entry.419239799" placeholder="電子信箱">
+                </span>
+                <span class="question">
+                    <span>你的<b>年級</b>是？</span><br>
+                    <span class="radio-set">
+                        <label>
+                            <input type="radio" name="entry.585057591" value="高一">
+                            <span class="radio">高一</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="entry.585057591" value="高二">
+                            <span class="radio">高二</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="entry.585057591" value="高三">
+                            <span class="radio">高三</span>
+                        </label>
+                    </span>
+                </span>
+                <span class="question">
+                    <span>你的<b>性別</b>是？</span><br>
+                    <span class="radio-set">
+                        <label>
+                            <input type="radio" name="entry.206825897" value="男">
+                            <span class="radio">男</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="entry.206825897" value="女">
+                            <span class="radio">女</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="entry.206825897" value="其他">
+                            <span class="radio">其他</span>
+                        </label>
+                    </span>
+                </span>
+                <span class="button-set">
+                    <button type="button" class="back" data-current-page="2">上一頁</button>
+                    <button type="button" class="next" data-current-page="2">下一頁</button>
+                </span>
+            </div>
+            <div id="page-3" class="page invisible">
+                <span class="question">
+                    以下部分將調查你對學校相關的事物的喜好度或看法。請仔細閱讀後作答。(2/5)
+                </span>
+                <span class="question">
+                    <span>就目前來看，你喜歡<b>學校的生活</b>嗎？</span><br>
+                        <span class="radio-set">
+                            <span>不喜歡</span>
+                            <label>
+                                <input type="radio" name="entry.1660436719" value="1">
+                                <span class="radio">1</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="entry.1660436719" value="2">
+                                <span class="radio">2</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="entry.1660436719" value="3">
+                                <span class="radio">3</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="entry.1660436719" value="4">
+                                <span class="radio">4</span>
+                            </label>
+                            <span>喜歡</span>
+                        </span>
+                    </span>
+                </span>
+                <span class="question">
+                    <span>呈上題，為什麼？</span><br>
+                    <input type="text" name="entry.685150814" placeholder="敘述一下原因...">
+                </span>
+                <span class="question">
+                    <span>你認為哪一個學科<b>最沒用</b>？(如果一定只能剛好選一個的話)</span><br>
+                    <span class="radio-set">
+                        <label>
+                            <input type="radio" name="entry.1353215473" value="國文">
+                            <span class="radio">國文</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="entry.1353215473" value="數學">
+                            <span class="radio">數學</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="entry.1353215473" value="英文">
+                            <span class="radio">英文</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="entry.1353215473" value="自然">
+                            <span class="radio">自然</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="entry.1353215473" value="社會">
+                            <span class="radio">社會</span>
+                        </label>
+                    </span>
+                </span>
+                <span class="question">
+                    <span>呈上題，為什麼？</span><br>
+                    <input type="text" name="entry.1711942117" placeholder="敘述一下原因...">
+                </span>
+                <span class="question">
+                    <span>你<b>最喜歡</b>哪個學科？(如果一定只能剛好選一個的話)</span><br>
+                    <span class="radio-set">
+                        <label>
+                            <input type="radio" name="entry.974781420" value="國文">
+                            <span class="radio">國文</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="entry.974781420" value="數學">
+                            <span class="radio">數學</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="entry.974781420" value="英文">
+                            <span class="radio">英文</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="entry.974781420" value="自然">
+                            <span class="radio">自然</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="entry.974781420" value="社會">
+                            <span class="radio">社會</span>
+                        </label>
+                    </span>
+                </span>
+                <span class="question">
+                    <span>呈上題，為什麼？</span><br>
+                    <input type="text" name="entry.415474345" placeholder="敘述一下原因...">
+                </span>
+                <span class="question">
+                    <span>你<b>最討厭</b>哪個學科？(如果一定只能剛好選一個的話)</span><br>
+                    <span class="radio-set">
+                        <label>
+                            <input type="radio" name="entry.2097295835" value="國文">
+                            <span class="radio">國文</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="entry.2097295835" value="數學">
+                            <span class="radio">數學</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="entry.2097295835" value="英文">
+                            <span class="radio">英文</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="entry.2097295835" value="自然">
+                            <span class="radio">自然</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="entry.2097295835" value="社會">
+                            <span class="radio">社會</span>
+                        </label>
+                    </span>
+                </span>
+                <span class="question">
+                    <span>呈上題，為什麼？</span><br>
+                    <input type="text" name="entry.1370665011" placeholder="敘述一下原因...">
+                </span>
+                <span class="button-set">
+                    <button type="button" class="back" data-current-page="3">上一頁</button>
+                    <button type="button" class="next" data-current-page="3">下一頁</button>
+                </span>
+            </div>
+            <div id="page-4" class="page invisible">
+                <span class="question">
+                    以下部分將調查你的時間使用。請仔細閱讀後作答。(3/5)
+                </span>
+                <span class="question">
+                    <span>在近七日中，你每天<b>讀書</b>的平均時間大約是幾個小時？<br>註：此處的讀書<b>不包含在學校</b>的時間，但包含補習的時間，及自行在家讀書的時間。</span><br>
+                    <input class="warp" type="number" name="entry.1049059317" placeholder="請輸入介於0-24的數字，可含小數點" min="0" max="24">
+                </span>
+                <span class="question">
+                    <span>在近七日中，你每天<b>使用手機</b>的平均時間大約是幾個小時？</span><br>
+                    <input class="warp" type="number" name="entry.1058711790" placeholder="請輸入介於0-24的數字，可含小數點" min="0" max="24">
+                </span>
+                <span class="question">
+                    <span>在近七日中，你在課後有進行哪些活動？(複選)<br>註：只要你在這七天內有任何一次就算。</span><br>
+                    <span class="checkbox-set">
+                        <label>
+                            <input type="checkbox" name="entry.1664715744" value="補習">
+                            <span class="checkbox">補習</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="entry.1664715744" value="打電動">
+                            <span class="checkbox">打電動</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="entry.1664715744" value="(不是被強制地)去運動">
+                            <span class="checkbox">(不是被強制地)去運動</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="entry.1664715744" value="看(長度約為5分鐘以上的)影片">
+                            <span class="checkbox">看(長度約為5分鐘以上的)影片</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="entry.1664715744" value="學習課外的東西(如鋼琴、畫畫)">
+                            <span class="checkbox">學習課外的東西(如鋼琴、畫畫)</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="entry.1664715744" value="滑短影音(如IG的Reels、Youtube的Shorts)">
+                            <span class="checkbox">滑短影音(如IG的Reels、Youtube的Shorts)</span>
+                        </label>
+                    </span>
+                </span>
+                <span class="button-set">
+                    <button type="button" class="back" data-current-page="4">上一頁</button>
+                    <button type="button" class="next" data-current-page="4">下一頁</button>
+                </span>
+            </div>
+            <div id="page-5" class="page invisible">
+                <span class="question">
+                    以下部分將調查你平日與周末分別的睡眠情形。請仔細閱讀後以24小時制回答。(4/5)
+                </span>
+                <span class="question">
+                    <span>在近七日的<b>平日</b>中，你平均幾點<b>起床</b>？</span><br>
+                    <span class="number-set">
+                        <input type="number" name="entry.1734437586_hour" placeholder="請輸入介於0-24的數字" min="0" max="24">
+                        <span>點</span>
+                        <input type="number" name="entry.1734437586_minute" placeholder="請輸入介於0-60的數字" min="0" max="24">
+                        <span>分</span>
+                    </span>
+                </span>
+                <span class="question">
+                    <span>在近七日的<b>周末</b>中，你平均幾點<b>起床</b>？</span><br>
+                    <span class="number-set">
+                        <input type="number" name="entry.1266742742_hour" placeholder="請輸入介於0-24的數字" min="0" max="24">
+                        <span>點</span>
+                        <input type="number" name="entry.1266742742_minute" placeholder="請輸入介於0-60的數字" min="0" max="24">
+                        <span>分</span>
+                    </span>
+                </span>
+                <span class="question">
+                    <span>在近七日的<b>平日</b>中，你平均幾點<b>睡覺</b>？</span><br>
+                    <span class="number-set">
+                        <input type="number" name="entry.508945036_hour" placeholder="請輸入介於0-24的數字" min="0" max="24">
+                        <span>點</span>
+                        <input type="number" name="entry.508945036_minute" placeholder="請輸入介於0-60的數字" min="0" max="24">
+                        <span>分</span>
+                    </span>
+                </span>
+                <span class="question">
+                    <span>在近七日的<b>周末</b>中，你平均幾點<b>睡覺</b>？</span><br>
+                    <span class="number-set">
+                        <input type="number" name="entry.1067239527_hour" placeholder="請輸入介於0-24的數字" min="0" max="24">
+                        <span>點</span>
+                        <input type="number" name="entry.1067239527_minute" placeholder="請輸入介於0-60的數字" min="0" max="24">
+                        <span>分</span>
+                    </span>
+                </span>
+                <span class="button-set">
+                    <button type="button" class="back" data-current-page="5">上一頁</button>
+                    <button type="button" class="next" data-current-page="5">下一頁</button>
+                </span>
+            </div>
+            <div id="page-6" class="page invisible">
+                <span class="question">
+                    以下部分將調查你對於自身時間使用的滿意程度。請依照提供的名詞選擇你對它的滿意程度。(5/5)
+                </span>
+                <span class="question">
+                    <span>我的<b>休閒</b>狀況。</span><br>
+                        <span class="radio-set">
+                            <span>不滿意</span>
+                            <label>
+                                <input type="radio" name="entry.1873933451" value="1">
+                                <span class="radio">1</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="entry.1873933451" value="2">
+                                <span class="radio">2</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="entry.1873933451" value="3">
+                                <span class="radio">3</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="entry.1873933451" value="4">
+                                <span class="radio">4</span>
+                            </label>
+                            <span>滿意</span>
+                        </span>
+                    </span>
+                </span>
+                <span class="question">
+                    <span>我的<b>課業</b>狀況。</span><br>
+                        <span class="radio-set">
+                            <span>不滿意</span>
+                            <label>
+                                <input type="radio" name="entry.330710040" value="1">
+                                <span class="radio">1</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="entry.330710040" value="2">
+                                <span class="radio">2</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="entry.330710040" value="3">
+                                <span class="radio">3</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="entry.330710040" value="4">
+                                <span class="radio">4</span>
+                            </label>
+                            <span>滿意</span>
+                        </span>
+                    </span>
+                </span>
+                <span class="question">
+                    <span>我的<b>睡眠</b>狀況。</span><br>
+                        <span class="radio-set">
+                            <span>不滿意</span>
+                            <label>
+                                <input type="radio" name="entry.1897970435" value="1">
+                                <span class="radio">1</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="entry.1897970435" value="2">
+                                <span class="radio">2</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="entry.1897970435" value="3">
+                                <span class="radio">3</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="entry.1897970435" value="4">
+                                <span class="radio">4</span>
+                            </label>
+                            <span>滿意</span>
+                        </span>
+                    </span>
+                </span>
+                <span class="question">
+                    <span><b>學校時間安排</b>狀況。</span><br>
+                        <span class="radio-set">
+                            <span>不滿意</span>
+                            <label>
+                                <input type="radio" name="entry.792135410" value="1">
+                                <span class="radio">1</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="entry.792135410" value="2">
+                                <span class="radio">2</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="entry.792135410" value="3">
+                                <span class="radio">3</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="entry.792135410" value="4">
+                                <span class="radio">4</span>
+                            </label>
+                            <span>滿意</span>
+                        </span>
+                    </span>
+                </span>
+                <span class="question">
+                    <span>我的<b>手機使用</b>狀況。</span><br>
+                        <span class="radio-set">
+                            <span>不滿意</span>
+                            <label>
+                                <input type="radio" name="entry.658661038" value="1">
+                                <span class="radio">1</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="entry.658661038" value="2">
+                                <span class="radio">2</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="entry.658661038" value="3">
+                                <span class="radio">3</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="entry.658661038" value="4">
+                                <span class="radio">4</span>
+                            </label>
+                            <span>滿意</span>
+                        </span>
+                    </span>
+                </span>
+                <span class="question">
+                    <span><b>總體生活</b>狀況。</span><br>
+                        <span class="radio-set">
+                            <span>不滿意</span>
+                            <label>
+                                <input type="radio" name="entry.1416998670" value="1">
+                                <span class="radio">1</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="entry.1416998670" value="2">
+                                <span class="radio">2</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="entry.1416998670" value="3">
+                                <span class="radio">3</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="entry.1416998670" value="4">
+                                <span class="radio">4</span>
+                            </label>
+                            <span>滿意</span>
+                        </span>
+                    </span>
+                </span>
+                <span class="button-set">
+                    <button type="button" class="back" data-current-page="6">上一頁</button>
+                    <button type="button" class="next" data-current-page="6">下一頁</button>
+                </span>
+            </div>
+            <div id="page-7" class="page invisible">
+                <span class="question">
+                    <span>你已完成填答，有什麼話想說的嗎？</span><br>
+                    <input type="text" name="entry.1579754512" placeholder="一些想對我說的話...">
+                </span>
+                <span class="button-set">
+                    <button type="button" class="back" data-current-page="7">上一頁</button>
+                    <button type="submit" name="button" value="submit">提交</button>
+                </span>
+            </div>
+        </form>
+        <iframe id="iframe_redirect" name="iframe_redirect" style="display: none;"></iframe>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
